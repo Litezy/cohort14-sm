@@ -5,6 +5,7 @@ configDotenv();
 
 const SEPOLIA_RPC_URL = process.env.SEPOLIA_RPC_URL ?? process.env.SEPOLIA_URL;
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
+const ETHERSCAN_KEY = process.env.ETHERSCAN_KEY;
 
 if (!SEPOLIA_RPC_URL) {
   throw new Error(
@@ -18,6 +19,11 @@ const config: HardhatUserConfig = {
     sepolia: {
       url: SEPOLIA_RPC_URL,
       accounts: PRIVATE_KEY ? [PRIVATE_KEY] : [],
+    },
+  },
+  etherscan: {
+    apiKey: {
+      sepolia: ETHERSCAN_KEY ?? "",
     },
   },
 };
