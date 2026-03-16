@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: SEE LICENSE IN LICENSE
 pragma solidity ^0.8.28;
-import {IERC20} from "./interfaces/interface.sol";
+import {IERC20} from "./interfaces/IERC20.sol";
 
 // Write a smart contract that can save both ERC20 and ether for a user.
 
